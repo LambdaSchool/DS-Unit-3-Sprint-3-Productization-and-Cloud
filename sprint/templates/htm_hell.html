@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Air_Quality_in_Los_Angeles</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="brand"><span>Dirty_Air!</span></a>
+      <!-- responsive-->
+      <div class="menu">
+        <a href="/refresh" class="button warning">Refresh Readings</a>
+      </div>
+    </nav>
+    <article class="flex two" style="padding: 3em 1em;">
+      <div>
+        <h1>{{ title }}</h1>
+      </div>
+      <div>
+        <h2>Looks like Los Angeles has lots of dirty air!</h2>
+        <ul>
+            {% for reading in readings %}
+            <li>{{ reading }}</li>
+            {% endfor %}
+        </ul>
+      </div>
+    </article>
+  </body>
+</html>
