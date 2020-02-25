@@ -1,0 +1,11 @@
+<h1>Air Quality Dashboard</h1>
+{% block content %}
+<h2>High Risk Days</h2>
+{%for risk in risks%}
+<p>{{risk.datetime}}, {{risk.value}}</p>
+{% endfor %}
+<h3>~Potential Risk Times~</h3>
+{%for record in records%}
+<p>{{record.datetime}}, {{record.value}}</p>
+{% endfor %}
+{% endblock %}

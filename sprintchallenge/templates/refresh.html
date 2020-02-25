@@ -1,0 +1,11 @@
+<h1>REFRESHED</h1>
+{% block content %}
+<h2>Live High Risk Times</h2>
+{% for risk in risks %}
+<p>{{risk.datetime}}, {{record.value}}</p>
+{% endfor %}
+<h3>Live Risk Times</h3>
+{% for record in records %}
+<p>{{record.datetime}}, {{record.value}}</p>
+{% endfor %}
+{% endblock %}
