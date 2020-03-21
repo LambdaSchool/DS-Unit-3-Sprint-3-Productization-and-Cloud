@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- comment like this - add- {{title}}  -->
+    <title>OpenAQ! {{title}} </title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <body>
+    <h1>OpenAQ!! Page 1!</h1>
+    
+    {% block content %}
+   <p>Readings over 10 (PM2.5) (Potentially Risky)</p>
+	<ul>
+        {% for rec in potentially_risky %}
+        <li>{{rec.datetime}} - {{rec.value}}  </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+  </body>
+</html>
