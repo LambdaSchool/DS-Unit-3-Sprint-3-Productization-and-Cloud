@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {% if users %}
+        {% for user in users %}
+            <p>{{user['name']}}</p>
+        {% endfor %}
+        {% else %}
+        <p>There are no users in our database</p>
+    {% endif %}
+</body>
+</html>
