@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <body style="background-color:#A9A9A9;">
+    <nav style="background-color:#008011;">
+        <a href="/" class="brand"><span>These data points are at times where the air quality was potentially risky. (I know it's basic, I'm new to this stuff.)</span></a>
+      </nav>
+    <article class="flex two" style="padding: 3em 1em;background-color:#A9A9A9;">
+      {% for data in risky %}
+      <p>{{ data }}</p>
+      {% endfor %}
+    </article>
+  </body>
+</html>
