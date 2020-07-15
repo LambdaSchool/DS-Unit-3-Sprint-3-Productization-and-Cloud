@@ -52,6 +52,8 @@ application using Flask and SQLite. A summary of the overall picture:
   [Basilica](https://www.basilica.ai/), as we will use both APIs in our
   application to get more and real data!
 
+https://not-twitter-flask.herokuapp.com/
+
 ## Resources and Stretch Goals
 
 - [Jinja2](http://jinja.pocoo.org/) is the dominant template engine, which you

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5431:5432
+  web_app:
+    build: .
+    volumes:
+      - ./web_app/:/web_app
+    environment:
+      FLASK_APP: aq_dashboard.py
+      FLASK_ENV: development
+      PORT: 5000
+      DATABASE_URL: postgresql://postgres@db/postgres
+    command: ./wait-for-pg.sh db flask run --host=0.0.0.0
+    #command: apachectl -D FOREGROUND
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - db

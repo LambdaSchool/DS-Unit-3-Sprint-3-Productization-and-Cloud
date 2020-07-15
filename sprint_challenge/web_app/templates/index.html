@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>AQI</title>
+    </head>
+    <body>
+        <h2><a href='/data'>Data Summary</a></h2>
+        <h2>RECENT PM 2.5 Los Angeles data</h2>
+        <table>
+        <tr>
+                <th>Datetime</th>
+                <th>Value</th> 
+                <th>Location</th>
+              </tr>
+       
+        {%for d in data%}
+            <tr>
+                <td>{{d[0]}}</td>
+                <td>{{d[1]}}</td> 
+                <td>{{d[2]}}</td>
+            </tr>
+        {%endfor%}
+       </table>
+        <h2>Last Potentially risky PM2.5 AQI</h2>
+        <table>
+        <tr>
+                <th>Location</th>
+                <th>Value</th> 
+                <th>Datetime</th>
+        </tr>
+       
+        {%for d in potentially_risky %}
+            <tr>
+                <td>{{d.datetime}}</td>
+                <td>{{d.location}}</td>
+                <td>{{d.value}}</td> 
+            </tr>
+        {%endfor%}
+    </table>
+   
+    </body>
+</html>
