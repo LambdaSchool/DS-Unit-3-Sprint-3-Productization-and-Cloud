@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title>{{ title }}</title>
+	</head>
+	<body>
+        
+		<h1>Air Qualitie in Los Angeles</h1>
+
+        {% block content %}
+        <ul>
+            {% for record in records %}
+            <li>Time: {{record.datetime}} - Value: {{record.value}}</li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+
+	</body>
+</html> 
