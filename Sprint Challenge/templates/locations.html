@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locations - {{ city }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="brand"><span>Air Quality Dashboard</span></a>
+
+      <!-- responsive-->
+      <input id="bmenub" type="checkbox" class="show">
+      <label for="bmenub" class="burger pseudo button">Menu</label>
+
+      <div class="menu">
+        <a href="/" class="button warning">High PM Days</a>
+      </div>
+    </nav>
+
+    <article class="flex one" style="padding: 3em 1em;">
+      {% block content %}
+      <div>
+        <h1>Locations in {{ city }}</h1>
+        <ul>
+            {% for loc in locations %}
+            <li>{{ loc['name'] }} (Latitude: {{ loc['latitude'] }}, Longitude {{ loc['longitude'] }})</li>
+            {% endfor %}
+        </ul>
+      </div>
+      {% endblock %}
+    </article>
+
+  </body>
+</html>
