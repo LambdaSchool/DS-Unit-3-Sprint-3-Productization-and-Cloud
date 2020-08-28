@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit 3 Sprint 4 - {{ title }}</title>
+        <link rel='stylesheet' href='https://unpkg.com/picnic'/>
+    </head>
+
+    <body>
+        <nav>
+            <a href="/" class="brand"><span>Air Quality</span></a>
+
+            <!-- responsive-->
+            <input id="bmenub" type="checkbox" class="show">
+            <label for="bmenub" class="burger pseudo button">Menu</label>
+
+            <div class="menu">
+              <a href="/refresh" class="button warning">Refresh Measurements</a>
+            </div>
+        </nav>
+        <article class='flex two' style='padding: 3em 1em;'>
+        {% block content %}
+        <div>
+            <h2>Cases of poor air quality in the Greater LA Area</h2>
+            {% for i in instance %}
+            <p>At {{ i.datetime }} Los Angeles had a particulate matter concentration of {{ i.value }}.</p>
+            {% endfor %}
+        </div>
+        {% endblock %}
+        </article>
+
+    </body>
+</html>
