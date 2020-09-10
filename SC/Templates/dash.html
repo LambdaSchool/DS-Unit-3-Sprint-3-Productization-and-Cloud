@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <meta charset="utf-8">
+   <title>Air Quality Report Page</title>
+    </head>
+
+    <body>
+
+        <h1> Air Quality Report </h1>
+        <h2> Los Angeles, California </h2>
+
+    {% block content %}
+    <ul>
+        {% for record in records %}
+        <li>Time: {{record.datetime}} - PPM: {{record.value}}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+
+    </body>
+</html>
