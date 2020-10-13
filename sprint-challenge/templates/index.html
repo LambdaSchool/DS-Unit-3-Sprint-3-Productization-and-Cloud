@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dwight's Weather SC! </title>
+</head>
+<body>
+    <div>
+        <h1>Potentially Risky Records</h1>
+        <p>Fine particulate matter under 10 and their timestamp</p>
+        <form action="/refresh">
+            <button type="submit" value="Refresh the data">Refresh the data</button>
+        </form>
+    </div>
+    <ul>
+        {% for r in res %}
+        <li>Time: {{ r.datetime }}</li>
+        <li>Value: {{ r.value }}</li>
+        <br>
+        {%  endfor %}
+    </ul>
+</body>
+</html>
