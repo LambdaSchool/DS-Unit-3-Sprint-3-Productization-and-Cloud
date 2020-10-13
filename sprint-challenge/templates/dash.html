@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <body>
+
+        <h2> Air Quality Report </h2>
+
+    {% block content %}
+    <ul>
+        {% for record in records %}
+        <li>Time: {{record.datetime}} - Value: {{record.value}}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+
+    </body>
+</html>
