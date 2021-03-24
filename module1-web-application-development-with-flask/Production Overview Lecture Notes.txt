@@ -1,0 +1,92 @@
+ML Deployment
+
+Q What is deployment?
+To use it for something
+
+How to build a model?
+
+1 Extract, Transform, Load from raw format
+2 preprocessing -
+3 Exploratory data analysis -
+----
+4 Features
+5 Pick alg
+6 Baseline
+7 Pick a model
+8 Test and tune 
+----
+9 Deployment
+
+Take-away is that it's a long road to get models deployed
+It might have to do ETL stuff again depending on where the raw data is
+
+
+Considerations for deployment
+
+1 Entanglement - dependency model has on inputs and features
+2 Data dependency - everything done on test has to be done on val, test
+3 Configuration - where, how does this fit in stack
+4 Data and feature prep
+5 Detecting model errors 
+6 Seperation of expertise - working in teams
+
+IRL example, our business no longer collects x feature
+that our model was using so we have to re-configure
+
+
+Design considerations:
+Responsibility understand everything needs to, can happen during process
+* IRL use something more robust than Flask
+data drift happens over time, watch assessment of model
+
+1. real time model versus batch
+2. how often will you need to update the model?
+large companies very rarely do this
+3. traffic demand - engineering make sure servers scale
+4. size of data - big data format needs distributed like HDFS, Spark, etc.
+5. type of alg/models
+6. can we do this without ML? 
+
+4 patterns for deployment
+----
+1 REST API - flask - batch, preds are on the fly
+building middleware to send data to
+2 Shared DB - batch, super high latency
+3 Streaming - streaming data, message que, preds streamed, super costly
+4 mobile (app) - streaming, preds on fly, process on device
+5 PPML (mostly legacy) - pred modelling markup language, done in R
+
+Front End
+markup, web; js, html, css
+async, ajax
+image editing
+seo
+cross browser issues
+
+Back End
+python, ruby, perl
+server architecture
+database admin
+scalability
+security
+data transformation
+backup
+
+Commnon Stacks:
+LAMP - Linux, Apache, MySQL, PhP
+MEAN - Js, Mongo, Express, Angular, Node.js
+
+Q what is flask?
+history, back in the day, had to do everything by hand
+auth files, random boilerplate stuff
+flask is a micro framework that has some of this boilerplate stuff
+
+why?
+not a backend service
+nothing new in flask
+well used
+
+Django is a large framework that has automatic settings for more stuff
+
+
+
