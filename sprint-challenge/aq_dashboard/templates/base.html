@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>aq dashboard</title>
+</head>
+
+<body>
+    {% block content %}
+    <header>
+        <p>Home</p>
+        <a href='/refresh'>Refresh</a>
+    </header>
+    {% for record in records %}
+    <p>{{ record }}</p>
+    {% endfor %}
+    {% endblock %}
+</body>
+
+</html>
