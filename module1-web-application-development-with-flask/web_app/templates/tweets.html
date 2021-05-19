@@ -1,0 +1,23 @@
+<!-- web_app/templates/tweets.html -->
+
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "tweets" %}
+
+{% block content %}
+
+    <h2>Welcome to the Tweets Page</h2>
+
+    <p>{{ message }}</p>
+
+    {% if tweet %}
+        <ul>
+        {% for tweet in tweets %}
+            <li>{{ tweet.title }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>tweet not found.</p>
+    {% endif %}
+
+{% endblock %}

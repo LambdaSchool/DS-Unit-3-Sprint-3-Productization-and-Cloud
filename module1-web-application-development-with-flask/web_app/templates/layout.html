@@ -1,0 +1,37 @@
+<!-- web_app/templates/layout.html -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>My Starter Web App | Helps students learn how to use the Flask Python package.</title>
+  </head>
+
+  <body>
+
+    <!-- SITE NAVIGATION -->
+    <div class="container">
+      <div id="nav">
+        <h1><a href="/">My Web App</a></h1>
+        <ul>
+            <li><a href="/tweets">Tweets Page</a></li>
+            <li><a href="/tweets/new">New tweets Form</a></li>
+        </ul>
+      </div>
+      <hr>
+
+      <!-- PAGE CONTENTS -->
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <!-- FOOTER -->
+      <div id="footer">
+        <hr>
+        &copy; Copyright 2020 Jessica Kimbril |
+        <a href="https://github.com/jessicakimbril">source</a>
+      </div>
+    </div>
+
+  </body>
+</html>

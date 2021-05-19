@@ -102,3 +102,16 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# vscode
+.vscode
+
+# gitignore
+.gitignore
+
+# pipfile
+Pipfile
+Pipfile.lock
+
+# database stuff
+migrations
