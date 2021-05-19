@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweets</title>
+</head>
+<body>
+
+
+    <h1>Twitter Tweets Page</h1>
+    <h2>Includes tweets</h2>
+
+    <p>{{ message }}</p>
+
+    {% if tweets %}
+        <ul>
+        {% for text in tweets %}
+            <li>{{ text.tweet }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Tweets not found.</p>
+    {% endif %}
+
+
+</body>
+</html>

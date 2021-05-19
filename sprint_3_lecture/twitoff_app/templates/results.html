@@ -1,0 +1,12 @@
+<!-- twitoff_app/templates/results.html -->
+
+{% extends "bootstrap_layout.html" %}
+
+{% block content %}
+    <h2>Results!</h2>
+
+    <p>Between '@{{ screen_name_a }}' and '@{{ screen_name_b }}',
+        the user who is most likely to say '{{ tweet_text }}'
+        is '@{{ screen_name_most_likely }}'
+    </p>
+{% endblock %}
