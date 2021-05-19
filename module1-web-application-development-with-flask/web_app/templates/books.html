@@ -1,0 +1,28 @@
+<!-- web_app/templates/books.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ny webapp</title>
+</head>
+<body>
+    <h2>Welcome to Bookdom!</h2>
+
+    <p>{{ message }}</p>
+
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li>{{ book["title"] }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Books not found.</p>
+    {% endif %}   
+</body>
+</html>
+
+
