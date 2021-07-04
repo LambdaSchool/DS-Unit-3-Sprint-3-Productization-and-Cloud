@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Air Quality</title>
+</head>
+<body>
+  <h2>Open Air Quality</h2>
+  <h4>Los Angeles</h4>
+  <ul>
+  {% for item in records %}
+    <li> At {{ item.datetime }} the PM25 was recorded at the level of {{ item.value }} </li>
+  {% endfor%}
+  </ul>
+
+  <h4>Delhi</h4>
+  <ul>
+  {% for record in delhirecords %}
+    <li> At {{ record.datetime }} the PM10 was recorded at the level of {{ record.value }} </li>
+  {% endfor%}
+  </ul>
+</body>
+</html>
