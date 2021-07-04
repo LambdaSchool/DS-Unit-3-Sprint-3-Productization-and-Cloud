@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <h1>Updtodate PM 2.5 levels in LA</h1>
+    <p>Refresh data <a href="/refresh">Refresh here</a></p>
+    {% for PM in filter %}
+      <p>{{PM.datetime}} - {{PM.value}}</p>
+    {% endfor %}
+  </body>
+</html>
