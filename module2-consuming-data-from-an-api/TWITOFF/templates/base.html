@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitoff - {{ title }} </title>
+  </head>
+  <body>
+    <h1>Twitoff Rules!</h1>
+    <p> Content goes here ...</p>
+    <ul>
+      {% for user in users %}
+      <li> {{user.id}} - {{ user.name }} </li>
+        <hr>
+        {% for tweet in user.tweets %}
+        <li>
+          {{ tweet.text }}<br>
+        </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </body>
+</html>

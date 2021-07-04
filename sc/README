@@ -1,0 +1,5 @@
+to run on a linux environment locally run the following commands:
+
+source set_env.sh
+
+flask run

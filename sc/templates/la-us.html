@@ -1,0 +1,8 @@
+{% extends "home.html" %}
+
+{% block content %}
+<h1>Los Angeles, United States - Air quality Violations</h1>
+{% for record in records %}
+<p>City: {{ record.city }} - {{ record.datetime }} - pm2.5 value: {{ record.value }}</p>
+{% endfor %}
+{% endblock %}
