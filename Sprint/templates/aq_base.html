@@ -1,0 +1,10 @@
+{% block content%}
+
+<div id="db_records">
+    <h2>{{ title }}</h2>
+    {% for record in records %}
+    <li>{{ record.datetime }} - {{ record.value }}</li>
+    {% endfor %}
+</div>
+
+{% endblock %}
