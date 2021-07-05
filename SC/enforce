@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+autopep8 --in-place -r --aggressive --aggressive $1
+mypy $1
+git add .

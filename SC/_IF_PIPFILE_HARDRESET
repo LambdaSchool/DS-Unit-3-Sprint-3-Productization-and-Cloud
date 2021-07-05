@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pipenv install pandas matplotlib seaborn flask flask-sqlalchemy python-decouple numpy sklearn gunicorn psycopg2 requests py-openaq

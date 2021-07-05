@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pandas = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+python-decouple = "*"
+numpy = "*"
+sklearn = "*"
+gunicorn = "*"
+psycopg2 = "*"
+requests = "*"
+matplotlib = "*"
+seaborn = "*"
+py-openaq = "*"
+
+[requires]
+python_version = "3.6"
