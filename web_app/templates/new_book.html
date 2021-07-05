@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>New Book Form</h2>
+
+    <p>Hello, use the form below to create a new book...</p>
+
+    <form action="/books/create" method="POST">
+
+        <label>Title:</label>
+        <input type="text" name="book_title" placeholder="Book XYZ" value="Book XYZ">
+
+        <label>Author:</label>
+        <select name="author_name">
+          <option value="A1">Author 1</option>
+          <option value="A2">Author 2</option>
+          <option value="A3">Author 3</option>
+        </select>
+
+        <button>Submit</button>
+    </form>
+
+{% endblock %}

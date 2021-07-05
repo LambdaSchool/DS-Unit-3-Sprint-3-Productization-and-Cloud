@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    {% block title %}
+      <title>My Starter Web App | Helps students learn how to use the Flask Python package.</title>
+    {% endblock %}
+  </head>
+
+  <body>
+
+    <!-- SITE NAVIGATION -->
+    <div class="container">
+      <div id="nav">
+        {% block nav %}
+          <h1><a href="/">My Web App</a></h1>
+          <ul>
+            <li><a href="/books">Books Page</a></li>
+            <li><a href="/books/new">New Book Form</a></li>
+          </ul>
+        {% endblock %}
+      </div>
+      <hr>
+
+      <!-- PAGE CONTENTS -->
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <!-- FOOTER -->
+      <div id="footer">
+        <hr>
+        &copy; Copyright 2020 Lawrence Kimsey
+      </div>
+    </div>
+
+  </body>
+</html>

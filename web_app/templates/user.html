@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Twitter User: {{ user.screen_name }} </h2>
+
+    <p>Name: {{ user.name }}</p>
+    <p>Location: {{ user.location }}</p>
+    <p>Followers: {{ user.followers_count }}</p>
+
+    {% if tweets %}
+        <ul>
+        {% for status in tweets %}
+            <li>{{ status.full_text }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>No tweets found.</p>
+    {% endif %}
+
+{% endblock %}
