@@ -9,5 +9,10 @@ the first day. You should still fork this repo, and open a PR where you add a
 update `work_notes.md` each day with the following:
 
 - What went well (in the context of working on the assignment) today?
+Followed along with the assigment. 
+
 - What was particularly interesting or surprising about the topic(s) today?
+Working with SqlAlchemy and using a database in a web application.
+
 - What was the most challenging part of the work today, and why?
+I want to understand the foundations of why code went where so that I can use what I learned to apply to different situations. 

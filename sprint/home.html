@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <h1>Open Air</h1>
+    </head>
+    <body>
+            <ul>
+            {% for item in data1.results %}
+            <li>({{ item.date }}, {{ item.value }})</li>
+            {% endfor %}
+            </ul>
+    </body>
+</html>
+
