@@ -1,0 +1,3 @@
+- was good going thru the lecture again. Made it make more sense. At a highlevel it feels like there is only a few things that need to happen in order to make the app available on herko: 1) have a database serviced remotely; 2) make sure any credentials are stored on heroku; 3) ensure that gunicorn is installed and referenced in a procfile that heroku can reference.  
+- its cool not having to run it locally all the time. just being able to go to the url is pretty cool!  
+- still struggling to get the form to create a new twitter user. That isnt working for some reason. Havent heard any suggestions on what it might be. 
