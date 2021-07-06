@@ -2,6 +2,9 @@
 Building a real deployed full-stack application, backed by Data Science
 --------------------
 
+Matthew Mauney
+https://github.com/mauney/TwitOff
+
 *Note* - assignments this week are all steps in a larger week-long project. They
 are to be worked on in a repo you make with your own account, as instructed in
 the first day. You should still fork this repo, and open a PR where you add a

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Air Quality for Los Angeles-Long Beach-Santa Ana, USA</h1>
+<h3>Showing times when the PM2.5 value was 10 or greater.</h3>
+
+{% for record in records %}
+<p>City: {{ record.city }}<br>Time: {{ record.datetime}}<br/>pm25 value: {{ record.value }}</p>
+{% endfor %}
+
+{% endblock %}

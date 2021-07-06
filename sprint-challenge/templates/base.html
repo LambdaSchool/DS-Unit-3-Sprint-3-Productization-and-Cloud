@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Air Quality</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+    <link rel= "stylesheet" type= "text/css" href= "/static/main.css">
+  </head>
+  <body>
+
+    <div class="navigation">
+        <p><a href='/'>home</a></p>
+        <p><a href='/refresh'>refesh</a></p>
+        <p><a href='/about'>about</a></p>
+    </div>
+
+    {% block content %}
+
+    <h1>Air Quality</h1>
+    <h3>Select a city below to show times when the PM2.5 value was 10 or greater.</h3>
+
+    <div class="selection">
+            <p><a href='/la'>Los Angeles, Chile</a></p>
+            <p><a href='/la-us'>Los Angeles-Long Beach-Santa Ana, USA</a></p>
+        </div>
+
+    {% endblock %}
+
+  </body>
+</html>
