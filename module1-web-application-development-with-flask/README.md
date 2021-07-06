@@ -1,4 +1,4 @@
-# Web Application Development with Flask
+#Dakota DS1 Web Application Development with Flask
 
 In the modern day, most applications we interact with are *web* applications -
 client-server architectures delivered via HTTP and accessed with a web browser.
