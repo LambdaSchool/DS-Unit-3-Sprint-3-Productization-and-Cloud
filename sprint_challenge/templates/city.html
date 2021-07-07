@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<p>These are the times when high PM2.5 values were reported in {{ this_city.name }}</p>
+<h2>PM2.5 above 10</h2>
+<ul>
+    {% for rec in above10 %}
+    <li>{{ rec.datetime }}: {{ rec.value }}</li>
+    {% endfor%}
+</ul>
+<h2>PM2.5 above 5</h2>
+<ul>
+    {% for rec in above5 %}
+    <li>{{ rec.datetime }}: {{ rec.value }}</li>
+    {% endfor%}
+</ul>
+<h2>All results</h2>
+<ul>
+    {% for rec in all_air %}
+    <li>{{ rec.datetime }}: {{ rec.value }}</li>
+    {% endfor%}
+</ul>
+{% endblock content%}
