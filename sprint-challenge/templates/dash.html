@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    {% block content %}
+    <div id="date-and-pm25">
+        <h2>{{ title }}</h2>
+        {% for record in records %}
+        <li>{{ record }}</li>
+        {% endfor %}
+    </div>
+    {% endblock %}
+</html>
