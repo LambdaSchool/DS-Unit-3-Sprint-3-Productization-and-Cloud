@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Choose a city to see recent moments with bad air quality.</p>
+{% for city in city_list %}
+    <li><a href='/city/{{ city[1] }}'>{{ city[0] }}</a></li>
+{% endfor%}
+{% endblock content%}
