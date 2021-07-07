@@ -47,6 +47,7 @@ and SpacCy package & model via Python), then:
   
 
 ## Resources and Stretch Goals
+
 - Add a `/user/<name>` route and template that pulls and displays user Tweets
 - [Flask routing](http://flask.pocoo.org/docs/1.0/quickstart/#routing) is simple
   but powerful - take advantage of it!
