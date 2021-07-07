@@ -1,0 +1,69 @@
+"""Main application and routing logic for Open AQ."""
+from decouple import config
+from flask import Flask, render_template, request
+from .models import DB, User
+from .predict import predict_user
+from .twitter import add_or_update_user, fetch
+
+
+def create_app():
+    """Create and configure an instance of the Flask application."""
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    DB.init_app(app)
+
+    @app.route('/')
+    def root():
+        users = User.query.all()
+        return render_template('base.html', title='Home', users=users)
+
+    @app.route('/user', methods=['GET'])
+    def queryUser():
+        users = User.query.all()
+        return render_template('alluser.html', title='All Users', users=users)
+
+#import pdb; pdb.set_trace()
+    @app.route('/user/<name>', methods=['GET'])
+    def fetchUser(name):
+        #import pdb; pdb.set_trace()
+        if request.method == 'GET':
+            twitter_tweets, db_tweets = fetch(name)
+            message = 'Fetching up to 200 latest tweets from Tweepy'
+        return render_template('user.html', title=name, tweets=twitter_tweets, 
+          db_tweets=db_tweets, message=message)
+
+    @app.route('/adduser', methods=['POST'])
+    def adduser(name=None):
+        message = ''
+        name = name or request.values['user_name']
+        try:
+            if request.method == 'POST':
+                twitter_user= add_or_update_user(name)
+                message = 'User {} successfully added!'.format(twitter_user.screen_name)
+            #import pdb; pdb.set_trace()
+            tweets= User.query.filter(User.name == twitter_user.screen_name).one().tweets
+        except Exception as e:
+            message = 'Error adding {}: {}'.format(name, e)
+            tweets = []
+        return render_template('user.html', title=name, tweets=tweets, message=message)
+
+    @app.route('/compare', methods=['POST'])
+    def compare():
+        user1, user2 = request.values['user1'], request.values['user2']
+        if user1 == user2:
+            return 'Cannot compare a user to themselves!'
+        else:
+            prediction = predict_user(user1, user2,
+                                      request.values['tweet_text'])
+            return user1 if prediction else user2
+
+
+    @app.route('/reset')
+    def reset():
+        DB.drop_all()
+        DB.create_all()
+        return render_template('base.html', title='DB Reset!', users=[])
+
+    return app
+

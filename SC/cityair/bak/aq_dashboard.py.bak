@@ -1,0 +1,56 @@
+from decouple import config
+from .models import DB, City
+import urllib.request as urlreq
+
+def load_measurement():
+  status, body = api.measurements(city='Los Angeles', parameter='pm25')
+  if status == 200:
+    try:
+      for i in range(len(body['results])):
+        city = body['results'][i]['city']
+        country = body['results'][i]['country']
+        location = body['results'][i]['location']
+        parameter = body['results'][i]['parameter']
+        date_utc = body['results'][i]['date']['utc']
+        date_local = body['results'][i]['date']['local']
+        value = body['results'][i]['value']
+        unit = body['results'][i]['unit']
+        latitude = body['results'][i]['coordinates']['latitude']
+        longitude = body['results'][i]['coordinates']['longitude']
+        db_measurement = Measurement(city=city,
+                                       country=country, 
+                                       location=location, 
+                                       parameter=parameter, 
+                                       date_utc=date_utc, 
+                                       date_local=date_local, 
+                                       value=value, 
+                                       unit=unit, 
+                                       latitude=latitude, 
+                                       longitude=longitude )
+        DB.session.add(db_measurement)
+    except Exception as e:
+       print('Error processing {}: {}'.format(username, e))
+       raise e
+     else:
+       DB.session.commit()
+       return twitter_user
+
+
+def load_city()):
+    try:
+      byte_data = urlreq.urlopen('https://api.openaq.org/v1/cities').read()
+      data = byte_data.decode('UTF-8')
+      for i in range(len(data['results'])) :
+        city = data['results'][i]['city']
+        country_code = data['results'][i]['country']
+        count = data['results'][i]['count']
+        locations = data['results'][i]['locations']
+        db_city = City(name=city, country_code=country_code,count=count,locations=locations)
+        DB.session.add(db_city)
+     except Exception as e:
+       print('Error processing {}: {}'.format(db_city, e))
+       raise e
+     else:
+       DB.session.commit()
+       return twitter_user
+      

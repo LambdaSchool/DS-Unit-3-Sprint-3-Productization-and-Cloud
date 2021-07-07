@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Open Air Quality - {{ title }}</title>
+        <!-- CSS, keywords, metadata goes here -->
+       <link rel="stylesheet" href="https://unpkg.com/picnic">
+</head>
+
+<body>
+<h1>Open Air Quality!</h1>
+        {% block content %}
+  <p> {{ message }} </p>
+
+<form action="/compare" method="post">
+
+  <select name="pm25"  >
+  <option value="">All</option>
+    {% for m in measurements %}
+  <option value="{{ m['pm25'] }}">{{ m.pm25 }}</option>
+    {% endfor %}
+ </select>
+
+ <input type="submit" value=" Filter "> 
+</form>
+
+<TABLE>
+<thead>
+<TR>
+     <TH>City</TH>
+     <TH>Country</TH>
+     <TH>location</TH>
+     <TH>Parameter</TH> 
+     <TH>Date UTC</TH> 
+     <TH>Date Local</TH> 
+     <TH>Pm25</TH> 
+     <TH>Unit</TH> 
+     <TH>Latitude</TH> 
+     <TH>Longitude</TH> 
+</TR>
+</thead>
+   {% for m in measurements %}
+<TR>
+   <TD>{{ m['city'] }}</TD>
+   <TD>{{ m['country'] }}</TD>
+   <TD>{{ m['location'] }}</TD>
+   <TD>{{ m['parameter'] }}</TD>
+   <TD>{{ m['date_utc'] }}</TD>
+   <TD>{{ m['date_local'] }}</TD>
+   <TD>{{ m['pm25'] }}</TD>
+   <TD>{{ m['unit'] }}</TD>
+   <TD>{{ m['latitude'] }}</TD>
+   <TD>{{ m['longitude'] }}</TD>
+</TR>
+   {% endfor %}
+</TABLE>
+
+        {% endblock %}
+</body>
+</html>
