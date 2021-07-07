@@ -1,5 +1,6 @@
 # Web Application Development with Flask
 
+
 In the modern day, most applications we interact with are *web* applications -
 client-server architectures delivered via HTTP and accessed with a web browser.
 As a data scientist we will generally not build such applications, but we do
