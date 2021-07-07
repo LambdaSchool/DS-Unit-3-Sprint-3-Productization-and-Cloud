@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div>
+        <h2>Potentially Risky Records</h2>
+        <form action="/refresh">
+            <button type="submit" value="Refresh Data">Refresh Data</button>
+        </form>
+    </div>
+    <ul>
+        {% for r in records %}
+        <li>Time: {{ r.datetime }}</li>
+        <li>Value: {{ r.value }}</li>
+        <br>
+        {%  endfor %}
+    </ul>
+</body>
+</html>
