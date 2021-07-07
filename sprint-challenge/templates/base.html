@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <title>Sprint Challenge</title>
+         <!-- CSS, keywords, metadata goes here -->
+     </head>
+
+     <body>
+	  <h1>Sprint Challenge - {{header}}</h1>
+	  <p>List of values with PM25 greater than 10 in Los Angels</p>
+          <ul>
+               {% for record in records %}
+               <li>DateTime:{{ record.datetime }} with Value: {{ record.value }}</li>
+               {% endfor %}
+          </ul>
+     </body>
+</html>
+
