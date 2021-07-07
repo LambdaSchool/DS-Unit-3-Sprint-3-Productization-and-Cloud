@@ -1,0 +1,1 @@
+web: gunicorn openaq_dash:APP -t 120
