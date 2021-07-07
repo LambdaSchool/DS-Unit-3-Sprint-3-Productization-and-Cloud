@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="http://localhost:5000/refresh" method="GET">
+    <p><input type="submit" value="Refresh Values" /></p>
+</form>
+<ul>
+{% for entry in la_pm25 %}
+    <li>
+        <span>Date: {{ entry.datetime.date() }} </span>
+        <span>Time: {{ entry.datetime.time() }} </span>
+        <span> PM 2.5 Levels: {{ entry.value }}</span>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

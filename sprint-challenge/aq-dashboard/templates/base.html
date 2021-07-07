@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - AQ Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+    <h1>Air Quality Dashboard</h1>
+</nav>
+<section>
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+</section>
