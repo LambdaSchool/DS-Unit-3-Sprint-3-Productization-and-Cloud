@@ -11,3 +11,7 @@ update `work_notes.md` each day with the following:
 - What went well (in the context of working on the assignment) today?
 - What was particularly interesting or surprising about the topic(s) today?
 - What was the most challenging part of the work today, and why?
+
+See notes file for updated progress.
+
+link to project reop: https://github.com/AndrewMarksArt/twitoff-app

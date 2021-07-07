@@ -1,0 +1,28 @@
+creating notes and making PR
+
+link to project (also in readme): https://github.com/AndrewMarksArt/twitoff-app
+
+Finished lessons 1, 2, and 3
+
+will need to get caught up on lesson 4 on Thursday and Friday due to schedule conflict
+
+At the point where I have the webapp able to take a user name,
+if the user is not in the DB then find tweets and add tweets with the user to the DB, 
+if the user is in the DB display the user name and all tweets in the DB from that user.
+
+Just added the simple Logistic Regression model,
+takes 2 users and text to try and predict who is more likely to have said it between the 2 users,
+queries the DB for each user and creates a numpy array from the embedings for each tweet in the DB,
+stacks they on top of each other and concatenates labels as 0 and 1,
+fits the LogisticRegression Model using the embeddings from the tweets in DB and labels,
+uses BASILICA to embed the text to predict on,
+returns a prediction based on the Logistic Regression model and the new embedding.
+
+TODO:
+-(MOST IMPORTANT) Get more tweets
+-Demensionality reduction
+-Train/Val/Test split
+-Shuffle data
+-decide on a scoring metric
+-build a baseline to compare to
+-try more powerful models
