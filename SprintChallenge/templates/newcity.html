@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/city" method="post">
+      <select name="city">
+        {% for city in cities %}
+        <option value="{{ city }}">{{ city }} </option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="See recent PM2.5 levels">
+  </form>
+
+{% endblock %}

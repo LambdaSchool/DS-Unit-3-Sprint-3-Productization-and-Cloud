@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Potentiall Hazardous PM</title>
+  </head>
+  <body>
+    {% block content %}
+    <p>  {{ city }} has experienced potentially hazardous levels of PM at the following
+      times </p>
+    <ul>
+      {% for data in dateValue %}
+      <li>{{ data }}</li>
+      {% endfor %}
+      <a href="/refresh">Refresh LA data in Database</a>
+      <a href="/newcity">Choose a New City</a>
+    </ul>
+    {% endblock %}
+  </body>
+</html>

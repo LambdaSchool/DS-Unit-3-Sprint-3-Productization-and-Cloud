@@ -1,0 +1,4 @@
+
+Error Codes
+400s are for web client
+500s are for backend
