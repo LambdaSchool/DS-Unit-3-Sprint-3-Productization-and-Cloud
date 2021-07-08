@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <body>
+        <div class="splash-container">
+            <div class="splash">
+                <h1 class="splash-head">OpenAQ Dashboard</h1>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-3-5">
+                        <form method='POST' action='/get' class="pure-form pure-form-stacked">
+                            <fieldset>
+                                <label for="city">City</label>
+                                <input type="text" name="city" class="pure-input-1">
+                                <label for="country">Country Code</label>
+                                <input type="text" name="country" class="pure-input-1">
+                                <label for="date_from">Start Date</label>
+                                <input type="date" name="date_from" class="pure-input-1">
+                                <label for="date_to">End Date</label>
+                                <input type="date" name="date_to" class="pure-input-1">
+                                <label for="min_val">Min pm25 Value</label>
+                                <input type="number" name="min_val" class="pure-input-1">
+                                <label for="max_val">Max pm25 Value</label>
+                                <input type="number" name="max_val" class="pure-input-1">
+                                <input type="submit" value="Search" class="pure-input-1">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

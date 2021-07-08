@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head">OpenAQ Results</h1>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="pure-u-1 pure-u-md-3-5">
+                {% if records %}
+                    <table class="pure-table">
+                        <tr>
+                            <th>City (Country)</th>
+                            <th>Date & Time</th>
+                            <th>Value (pm25)</th>
+                        </tr>
+                        {% for r in records %}
+                            <tr>
+                                <td>{{ r.city }} ({{ r.country }})</td>
+                                <td>{{ r.datetime.strftime('%H:%M %m/%d/%Y') }}</td>
+                                <td>{{ '%.3f' % r.value }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% else %}
+                    <p>No records found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
