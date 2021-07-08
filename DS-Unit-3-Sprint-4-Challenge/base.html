@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>airqual</title>
+    </head>
+    <body>
+        <h1>airqual</h1>
+        <p>Potentially risky air quality records:</p>
+
+        <ul>
+            {% for record in records %}
+            <li>{{ record.datetime }} : {{ record.value }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

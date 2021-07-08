@@ -1,0 +1,45 @@
+name: airqual
+channels:
+  - defaults
+dependencies:
+  - autopep8=1.4.4=py_0
+  - ca-certificates=2019.5.15=0
+  - certifi=2019.6.16=py37_0
+  - click=7.0=py37_0
+  - flask=1.0.3=py37_0
+  - flask-sqlalchemy=2.4.0=py_0
+  - itsdangerous=1.1.0=py37_0
+  - jinja2=2.10.1=py37_0
+  - markupsafe=1.1.1=py37he774522_0
+  - openssl=1.1.1c=he774522_1
+  - pep8=1.7.1=py37_0
+  - pip=19.1.1=py37_0
+  - pycodestyle=2.5.0=py37_0
+  - python=3.7.3=h8c8aaf0_1
+  - setuptools=41.0.1=py37_0
+  - sqlalchemy=1.3.4=py37he774522_0
+  - sqlite=3.28.0=he774522_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.15.26706=h3a45250_4
+  - werkzeug=0.15.4=py_0
+  - wheel=0.33.4=py37_0
+  - wincertstore=0.2=py37_0
+  - pip:
+    - bleach==3.1.0
+    - chardet==3.0.4
+    - docutils==0.14
+    - gunicorn==19.9.0
+    - idna==2.8
+    - pkginfo==1.5.0.1
+    - psycopg2==2.8.3
+    - py-openaq==1.1.0
+    - pygments==2.4.2
+    - python-dateutil==2.8.0
+    - python-decouple==3.1
+    - python-dotenv==0.10.3
+    - requests==2.22.0
+    - six==1.12.0
+    - tqdm==4.32.2
+    - urllib3==1.25.3
+    - webencodings==0.5.1
+prefix: C:\Users\nicklauswinters\Anaconda3\envs\airqual

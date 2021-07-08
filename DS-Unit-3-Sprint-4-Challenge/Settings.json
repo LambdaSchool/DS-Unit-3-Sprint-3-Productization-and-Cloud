@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "C:\\Users\\nicklauswinters\\Anaconda3\\envs\\airqual\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "autopep8"
+}
