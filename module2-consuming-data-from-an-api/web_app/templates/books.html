@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% if books %}
+    <ul>
+        {% for book in books %}
+        <p>
+            <li>{{ book.title }}</li>
+        </p>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>no books!</p>
+    {% endif %}
+
+
+</body>
+</html>

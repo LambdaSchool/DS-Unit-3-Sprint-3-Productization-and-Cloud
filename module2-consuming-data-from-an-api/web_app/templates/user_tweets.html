@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ username }} tweets:</h1>
+    {% if user_tweets %}
+    <ul>
+        {% for tweets in user_tweets %}
+        <p>
+            <li>{{ tweets.text }}</li>
+        </p>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>no tweets!</p>
+    {% endif %}
+    <h1>Create tweet</h1>
+    <form action="/users/{{ username }}/new_tweet" method="post">
+        <label>Tweet text:</label>
+        <input type="text", name="tweet_text">
+
+        <button>Submit</button>
+    </form>
+    <a href="/users/">users list</a>
+
+</body>
+</html>

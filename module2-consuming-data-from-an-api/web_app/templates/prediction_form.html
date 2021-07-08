@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Prediction Time</h2>
+
+    <p>Use the form below to predict which user is more likely to say a given tweet...</p>
+
+    <form action="/predict" method="POST">
+
+        <label>Twitter User A:</label>
+        <select name="screen_name_a">
+            <option value="elonmusk" selected="true">@elonmusk</option>
+            <option value="justinbieber">@justinbieber</option>
+            <option value="s2t2">@s2t2</option>
+        </select>
+        <br>
+
+        <label>Twitter User B:</label>
+        <select name="screen_name_b">
+            <option value="elonmusk">@elonmusk</option>
+            <option value="justinbieber" selected="true">@justinbieber</option>
+            <option value="s2t2">@s2t2</option>
+          </select>
+        <br>
+
+        <label>Tweet Text:</label>
+        <input type="text" name="tweet_text" placeholder="Tesla Model S production facility is great" value="Tesla Model S production facility is great">
+        <br>
+
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>

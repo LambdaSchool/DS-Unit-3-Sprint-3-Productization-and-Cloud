@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% if users %}
+    <ul>
+        {% for user in users %}
+        <a href={{user.username}}>
+            <li>{{ user.username }}</li>
+        </a>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>no users!</p>
+    {% endif %}
+    <a href="/users/new/">create new users</a>
+
+
+</body>
+</html>
