@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AQ_DASHBOARD</title>
+        <!-- CSS, keywords, metadata goes here -->
+    </head>
+
+    <body>
+        <h1>AQ AQ_DASHBOARD</h1>
+        <h3>Risky PM 2.5 Records</h3>
+
+        <ul>
+            {% for record in records %}
+            <li>{{ record }}</li>
+            {% endfor %}
+        </ul>
+
+
+    
+    </body>
+</html>
