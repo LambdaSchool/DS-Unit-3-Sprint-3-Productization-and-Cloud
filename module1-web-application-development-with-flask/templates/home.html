@@ -1,0 +1,18 @@
+<html lang="en" dir="ltr">
+	<head>
+		{% if title %}
+		<title>Flask Test</title>
+		{% else %}
+		<title>Backup</title>
+		{% endif %}
+
+	</head>
+	<body>
+	<p>test</p>
+		{% for post in posts %}
+			<h1>{{ post.title }}</h1>
+			<p> By {{ post.author }} on {{post.date_posted }}</p>
+		{% endfor %}
+	</body>
+</html>
+	
